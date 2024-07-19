@@ -34,7 +34,7 @@ body{
 }
 
 .sign-in-Btn{
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .sign-in-Btn a{
@@ -49,7 +49,7 @@ body{
 }
 
 .header-list{
-    margin-right: .5rem;
+    margin-right: 1.5rem;
     margin-bottom: -.5rem;
     list-style-type: none;
     display: flex;
