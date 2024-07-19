@@ -22,7 +22,8 @@
 }
 
 .header-content{
-    margin: 1rem 9rem;
+    max-width: 76%;
+    margin: 1rem auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,10 +32,6 @@
 
 body{
     background-color: rgb(235,236,237);
-}
-
-.sign-in-Btn{
-    margin-left: 1.5rem;
 }
 
 .sign-in-Btn a{
@@ -49,7 +46,6 @@ body{
 }
 
 .header-list{
-    margin-right: 1.6rem;
     margin-bottom: -.5rem;
     list-style-type: none;
     display: flex;
