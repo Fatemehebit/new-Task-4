@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0" />
@@ -50,7 +50,7 @@
                     <div class="img-card"></div>
                     <img src="./assets/img/Mehdi.png" alt="Mehdi">
                     <div class="learn-courses le-co"><a href="#">مدت دوره: ۷۰ ساعت</a></div>
-                    <div class="sh-co"><a href="#">مشاهده دوره</a></div>
+                    <div class="show-courses"><a href="#">مشاهده دوره</a></div>
                 </div>
 
                 <div class="card">
@@ -64,11 +64,17 @@
 
         <section class="learn-Tavarom">
             <div class="video-learn">
-                <video src="#"></video>
-                <div class="img-video"></div>
-                <img class="video-img" src="./assets/img/Mehdi.png" alt="Mehdi">
-                <div class="box-video"></div>
-                <img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play">
+
+                <video controls src="./assets/video/SampleVideo_1280x720_10mb.mp4" class="hidden"
+                    type="video/mp4"></video>
+
+                <div id="playButton">
+                    <div class="img-video"></div>
+                    <img class="video-img " src="./assets/img/Mehdi.png" alt="Mehdi">
+                    <div class="box-video"></div>
+                    <a href="#"><img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play"></a>
+                </div>
+
             </div>
 
             <div class="detail-course">
@@ -79,8 +85,8 @@
                     <h3>دوره آموزشی سبقت از تورم</h3>
                 </div>
                 <div class="time-courses">
-                    <div class="time-session">12 جلسه</div>
-                    <div class="time-period">مدت دوره: ۷۰ ساعت</div>
+                    <div class="time-sessions">12 جلسه</div>
+                    <div class="time-periods">مدت دوره: ۷۰ ساعت</div>
                 </div>
                 <div class="sessions">
                     <table>
@@ -140,25 +146,33 @@
             </div>
 
             <div class="video-learn">
-                <video src="#"></video>
-                <div class="img-video"></div>
-                <img class="video-img" src="./assets/img/Mehdi.png" alt="Mehdi">
-                <div class="box-video">
 
+                <video id="playVideo" controls src="./assets/video/SampleVideo_1280x720_10mb.mp4" class="hidden"
+                    type="video/mp4"></video>
+
+                <div id="playBtn">
+                    <div class="img-video"></div>
+                    <img class="video-img " src="./assets/img/Mehdi.png" alt="Mehdi">
+                    <div class="box-video"></div>
+                    <a href="#"><img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play"></a>
                 </div>
-                <img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play">
+
             </div>
         </section>
 
         <section class="learn-Tavarom">
             <div class="video-learn">
-                <video src="#"></video>
-                <div class="img-video"></div>
-                <img class="video-img" src="./assets/img/Mehdi.png" alt="Mehdi">
-                <div class="box-video">
 
+                <video id="playerVideo" controls src="./assets/video/SampleVideo_1280x720_10mb.mp4" class="hidden"
+                    type="video/mp4"></video>
+
+                <div id="playB">
+                    <div class="img-video"></div>
+                    <img class="video-img " src="./assets/img/Mehdi.png" alt="Mehdi">
+                    <div class="box-video"></div>
+                    <a href="#"><img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play"></a>
                 </div>
-                <img class="play-arrow" src="./assets/img/icons8-play-50.png" alt="play">
+
             </div>
 
             <div class="detail-course">
@@ -169,8 +183,8 @@
                     <h3>دوره آموزشی سبقت از تورم</h3>
                 </div>
                 <div class="time-courses">
-                    <div class="time-session">12 جلسه</div>
-                    <div class="time-period">مدت دوره: ۷۰ ساعت</div>
+                    <div class="time-sessions">12 جلسه</div>
+                    <div class="time-periods">مدت دوره: ۷۰ ساعت</div>
                 </div>
                 <div class="sessions">
                     <table>
@@ -326,6 +340,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        var playButton = document.getElementById('playButton');
+        var playBtn = document.getElementById('playBtn');
+        var playB = document.getElementById('playB');
+        var videoPlayer = document.querySelector('video');
+        var playVideo = document.getElementById('playVideo');
+        var playerVideo = document.getElementById('playerVideo');
+
+        playButton.addEventListener('click', function () {
+
+            videoPlayer.classList.add('show')
+            videoPlayer.play();
+
+            playButton.classList.add('hidden');
+        });
+
+        playBtn.addEventListener('click', function () {
+
+            playVideo.classList.add('show')
+            playVideo.play();
+
+            playBtn.classList.add('hidden');
+        });
+
+        playB.addEventListener('click', function () {
+
+            playerVideo.classList.add('show')
+            playerVideor.play();
+
+            playB.classList.add('hidden');
+        });
+    </script>
 
 </body>
 
