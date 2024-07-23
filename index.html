@@ -350,25 +350,26 @@
         var playerVideo = document.getElementById('playerVideo');
 
         playButton.addEventListener('click', function () {
-
-            videoPlayer.classList.add('show')
+            videoPlayer.classList.remove('hidden');
+            videoPlayer.classList.add('show');
             videoPlayer.play();
 
             playButton.classList.add('hidden');
         });
 
         playBtn.addEventListener('click', function () {
-
-            playVideo.classList.add('show')
+            playVideo.classList.remove('hidden');
+            playVideo.classList.add('show');
             playVideo.play();
 
             playBtn.classList.add('hidden');
         });
 
         playB.addEventListener('click', function () {
-
-            playerVideo.classList.add('show')
-            playerVideor.play();
+            playB.classList.add('hidden');
+            playerVideo.classList.remove('hidden');
+            playerVideo.classList.add('show');
+            playerVideo.play();
 
             playB.classList.add('hidden');
         });
